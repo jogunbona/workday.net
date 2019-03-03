@@ -20,6 +20,13 @@ namespace Interview.Test
             //Verify Number of work days is a positive integer
 
             Assert.IsTrue(numberOfWorkdays > 0);
-		}
+
+
+            //Test Calculate Word day Method
+            DateTime dt = Workday.CalculateWorkday(DateTime.Parse("03/02/2019"), 2);
+
+            Assert.IsTrue(dt > DateTime.MinValue && dt < DateTime.MaxValue);
+
+        }
 	}
 }
